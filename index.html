@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashions Yulivann | Moda y Estilo</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para la fuente Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f9;
+        }
+        /* Estilos personalizados para el scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Barra de Navegación Fija -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <!-- Logo/Nombre de la Empresa -->
+            <a href="#inicio" class="text-2xl font-extrabold text-pink-600 tracking-wider hover:text-pink-800 transition duration-300">
+                Fashions <span class="text-indigo-500">Yulivann</span>
+            </a>
+            
+            <!-- Menú de Navegación (Desktop) -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#inicio" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Inicio</a>
+                <a href="#empresa" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Empresa</a>
+                <a href="#servicios" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Servicios</a>
+                <a href="#galeria" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Galería</a>
+                <a href="#contacto" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Contacto</a>
+            </nav>
+
+            <!-- Botón de Menú Móvil (Hamburguesa) -->
+            <button id="menu-button" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+        
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center border-t border-gray-100">
+                <a href="#inicio" class="block w-full text-center py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-md font-medium transition duration-300">Inicio</a>
+                <a href="#empresa" class="block w-full text-center py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-md font-medium transition duration-300">Empresa</a>
+                <a href="#servicios" class="block w-full text-center py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-md font-medium transition duration-300">Servicios</a>
+                <a href="#galeria" class="block w-full text-center py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-md font-medium transition duration-300">Galería</a>
+                <a href="#contacto" class="block w-full text-center py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-md font-medium transition duration-300">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: INICIO (HERO) -->
+        <section id="inicio" class="pt-24 pb-16 lg:pb-32 bg-indigo-50/70">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+                <!-- Contenido (Texto y Botón) -->
+                <div class="space-y-6 md:order-1 order-2 text-center md:text-left">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
+                        Viste tu <span class="text-pink-600">Confianza</span>, Define tu <span class="text-indigo-500">Estilo</span>.
+                    </h1>
+                    <p class="text-xl text-gray-600 italic">
+                        "La moda es una forma de decir quién eres sin tener que hablar."
+                    </p>
+                    <a href="#servicios" class="inline-block px-8 py-3 bg-pink-600 text-white font-bold text-lg rounded-lg shadow-xl hover:bg-pink-700 transform hover:scale-105 transition duration-300 ease-in-out uppercase tracking-wider">
+                        Ver Colección Ahora
+                    </a>
+                </div>
+                
+                <!-- Foto Representativa -->
+                <div class="md:order-2 order-1 shadow-2xl rounded-xl overflow-hidden">
+                    <img src="img/banner.png" alt="1000px" width="800px">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: HISTORIA DE LA EMPRESA & PRODUCTOS DESTACADOS (Empresa/Servicios) -->
+        <section id="empresa" class="py-20 lg:py-28 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+                <h2 class="text-4xl font-bold text-center text-indigo-600 mb-12">Nuestra Historia y Misión</h2>
+
+                <!-- Historia de la Empresa (Tabla/Grid de 2 columnas) -->
+                <div class="grid md:grid-cols-2 gap-10 items-center p-6 border border-gray-100 rounded-xl shadow-lg">
+                    <!-- Columna de Foto -->
+                    <div class="rounded-lg overflow-hidden shadow-xl">
+                        <img src="https://placehold.co/600x450/e0c3fc/5a32a3?text=Fundadora+Yulivann" alt="Foto de la fundadora de Fashions Yulivann" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Columna de Texto -->
+                    <div class="space-y-4">
+                        <h3 class="text-3xl font-semibold text-gray-900">OBJETIVO GENERAL</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Posicionar los  emprendimientos en redes sociales como una marca confiable, atractiva en la venta de tenis y ropa, lograndoun crecimiento sostenido en ventas y en la fidelización de clientes.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Nuestro alcance es vender tenis y ropa a nivel local y nacional a través de redes sociales, posicionar la marca como una opción accesible y de moda para jovenes y adultos y crear alianzas con proveedores confialbles que garanticen calidad y varieda de productos.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 pt-2">
+                            <li>Diseños Exclusivos</li>
+                            <li>muchas variedades y estilos</li>
+                            <li>Atención Personalizada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN ADICIONAL: HISTORIA DE CREACIÓN DEL NEGOCIO (Empresa) -->
+                <div class="grid md:grid-cols-2 gap-10 items-center p-6 bg-indigo-50 rounded-xl shadow-lg">
+                    <!-- Columna de Texto -->
+                    <div class="space-y-4 md:order-1 order-2">
+                        <h3 class="text-3xl font-semibold text-gray-900">Los Humildes Comienzos</h3>
+                        <p class="text-gray-600 leading-relaxed italic">
+                            Siempre soñamos con tener un negocio propio. Nos encantaban los tennis y la ropa urbana, y un día pensamos: “¿Por qué no empiezamos a vender nosotras mismas?”.
+
+Con unos pequeños ahorros compramos nuestro primer lote de prendas y tennis. No abrimos página web ni tienda física, simplemente comenzamos a ofrecer los productos a nuestros amigos, familiares y conocidos por WhatsApp. Tomabamos fotos de cada prenda, armamos un catálogo sencillo y lo enviabamos a todos los  contactos.
+
+Al principio, las ventas fueron pocas, pero eso no nos desanimó. Cada vez que se entregaba un pedido, cuidabamos los detalles: envolvíamos las prendas con cariño, entregabamos puntualmente y pedíamos a los clientes que nos dieran su opinión. Gracias a eso, poco a poco fuimos creando una reputación de confianza entre sus cercanos.
+
+Hoy, aunque el negocio todavía se mueve solo en ese círculo de conocidos, nosotras sentimos que estámos construyendo una base sólida. La meta es que, con el tiempo, esos primeros clientes nos recomienden a más personas. Por ahora, seguimos aprendiendo cómo manejar precios, inventario y atención al cliente, soñando con el día en que las ventas ya no solo sean  por WhatsApp y se expandan a más barrios, ciudades y redes sociales..
+el negocio lleva aproximadamente 3 años.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            La dedicación y la retroalimentación de nuestras primeras clientas transformaron ese sueño en un negocio sólido. Recordamos con cariño aquellos días donde la calidad y el servicio eran nuestra única publicidad. Hoy, seguimos honrando esa tradición.
+                        </p>
+                    </div>
+                    <!-- Columna de Foto Antigua -->
+                    <div class="rounded-lg overflow-hidden shadow-xl md:order-2 order-1">
+                        <!-- Foto antigua afín al negocio -->
+                        <img src="https://placehold.co/600x450/9370DB/ffffff?text=Foto+Antigua+Taller" alt="Foto antigua del primer taller o máquina de coser" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: 6 PRODUCTOS DESTACADOS (Servicios) -->
+        <section id="servicios" class="py-20 lg:py-28 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-pink-600 mb-12">Nuestros Servicios y Productos Estrella</h2>
+                <p class="text-center text-xl text-gray-600 mb-16">Descubre las prendas que definen la tranquilidad.</p>
+
+                <!-- Grid de 6 Productos -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Producto 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 space-y-4">
+                        <img src="img/bata dama1.jpg" alt="800px" width="800px">
+                        <h4 class="text-2xl font-bold text-gray-900">Batola para dormir Dama</h4>
+                        <p class="text-gray-600 text-sm">¡Tela en algodón,cómoda y fresca para que tengas un excelente descanso.</p>
+                        <button onclick="contactarWhatsApp('Vestido Elegance', '123456789')" class="w-full flex items-center justify-center space-x-2 bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-green-600 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A10 10 0 0 0 16 16.2L21 21L16.2 16A10 10 0 1 1 7.9 20Z"/></svg>
+                            <span>Comprar por WhatsApp</span>
+                        </button>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 space-y-4">
+                        <img src="img/camisetas dama1.jpg" alt="1200px" width="800px">
+                        <h4 class="text-2xl font-bold text-gray-900">Camisetas Dama</h4>
+                        <p class="text-gray-600 text-sm">Seda suave, freca y estampados versatiles</p>
+                        <button onclick="contactarWhatsApp('Blusa Ejecutiva', '123456789')" class="w-full flex items-center justify-center space-x-2 bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-green-600 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A10 10 0 0 0 16 16.2L21 21L16.2 16A10 10 0 1 1 7.9 20Z"/></svg>
+                            <span>Comprar por WhatsApp</span>
+                        </button>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 space-y-4">
+                        <img src="img/chaqueta dama1.jpg" alt="800px" width="800px">
+                        <h4 class="text-2xl font-bold text-gray-900">Chaqueta Dama</h4>
+                        <p class="text-gray-600 text-sm">chaqueta ovejera, variedad de colores y en cuero.</p>
+                        <button onclick="contactarWhatsApp('Jeans Skinny Deluxe', '123456789')" class="w-full flex items-center justify-center space-x-2 bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-green-600 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A10 10 0 0 0 16 16.2L21 21L16.2 16A10 10 0 1 1 7.9 20Z"/></svg>
+                            <span>Comprar por WhatsApp</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Producto 4 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 space-y-4">
+                        <img src="img/camisetas hombre5.jpg" alt="800px" width="800px">
+                        <h4 class="text-2xl font-bold text-gray-900">Camisetas para Hombre</h4>
+                        <p class="text-gray-600 text-sm">Telas frescas y cómodas</p>
+                        <button onclick="contactarWhatsApp('Chaqueta Rebel', '123456789')" class="w-full flex items-center justify-center space-x-2 bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-green-600 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A10 10 0 0 0 16 16.2L21 21L16.2 16A10 10 0 1 1 7.9 20Z"/></svg>
+                            <span>Comprar por WhatsApp</span>
+                        </button>
+                    </div>
+
+                    <!-- Producto 5 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 space-y-4">
+                        <img src="img/chaqueta hombre1.jpg" alt="800px" width="800px">
+                        <h4 class="text-2xl font-bold text-gray-900">Chaqueta para Hombre</h4>
+                        <p class="text-gray-600 text-sm">Impermeable y frezca.</p>
+                        <button onclick="contactarWhatsApp('Falda Midi Plissé', '123456789')" class="w-full flex items-center justify-center space-x-2 bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-green-600 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A10 10 0 0 0 16 16.2L21 21L16.2 16A10 10 0 1 1 7.9 20Z"/></svg>
+                            <span>Comprar por WhatsApp</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Producto 6 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 space-y-4">
+                        <img src="img/medias dama1.jpg" alt="800px" width="800px">
+                        <h4 class="text-2xl font-bold text-gray-900">Medias para Dama</h4>
+                        <p class="text-gray-600 text-sm">algodón, muy frecas para cualquier ocasión.</p>
+                        <button onclick="contactarWhatsApp('Set Accesorios Oro', '123456789')" class="w-full flex items-center justify-center space-x-2 bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-green-600 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A10 10 0 0 0 16 16.2L21 21L16.2 16A10 10 0 1 1 7.9 20Z"/></svg>
+                            <span>Comprar por WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 4: OFERTAS Y NUEVOS PRODUCTOS (Productos Adicionales - 3 Columnas) -->
+        <section id="productos" class="py-20 lg:py-28 bg-indigo-50/70">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-indigo-600 mb-12">Lo Más Nuevo de Fashions Yulivann</h2>
+                <p class="text-center text-xl text-gray-600 mb-16">Piezas frescas y exclusivas que acaban de llegar a nuestra colección.</p>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Producto A -->
+                    <div class="group bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/ffe4e6/be185d?text=Top+Verano" alt="Top de Verano con Diseño Floral" class="w-full h-72 object-cover transition duration-500 group-hover:opacity-90">
+                        <div class="p-6 space-y-4">
+                            <h4 class="text-xl font-bold text-gray-900">Top Floral de Lino</h4>
+                            <p class="text-gray-600 text-sm">**¡Frescura total!** Lino transpirable y diseño con caída perfecta. Ideal para los días soleados y paseos en la playa. El **confort** nunca fue tan chic.</p>
+                            <button onclick="contactarWhatsApp('Top Floral de Lino', '123456789')" class="w-full flex items-center justify-center space-x-2 bg-pink-600 text-white py-2 rounded-lg font-semibold hover:bg-pink-700 transition duration-300">
+                                <span>¡Lo quiero! Comprar Ahora</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Producto B -->
+                    <div class="group bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/e0e7ff/4f46e5?text=Mono+Casual" alt="Mono enterizo casual de color azul" class="w-full h-72 object-cover transition duration-500 group-hover:opacity-90">
+                        <div class="p-6 space-y-4">
+                            <h4 class="text-xl font-bold text-gray-900">Mono Jumpsuit Versátil</h4>
+                            <p class="text-gray-600 text-sm">**Elegancia instantánea.** Una sola pieza para un look completo. Corte que estiliza y tela con caída. Transiciona del día a la noche con facilidad. **Máxima versatilidad.**</p>
+                            <button onclick="contactarWhatsApp('Mono Jumpsuit Versátil', '123456789')" class="w-full flex items-center justify-center space-x-2 bg-pink-600 text-white py-2 rounded-lg font-semibold hover:bg-pink-700 transition duration-300">
+                                <span>¡Lo quiero! Comprar Ahora</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Producto C -->
+                    <div class="group bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/d1fae5/065f46?text=Zapatos+Tacón" alt="Zapatos de tacón elegantes verdes" class="w-full h-72 object-cover transition duration-500 group-hover:opacity-90">
+                        <div class="p-6 space-y-4">
+                            <h4 class="text-xl font-bold text-gray-900">Tacones Stiletto Comfort</h4>
+                            <p class="text-gray-600 text-sm">**Camina con poder.** El tacón perfecto: alto, estable y con plantilla acolchada. Diseño vanguardista en tonos tierra. **Estilo que no cansa.**</p>
+                            <button onclick="contactarWhatsApp('Tacones Stiletto Comfort', '123456789')" class="w-full flex items-center justify-center space-x-2 bg-pink-600 text-white py-2 rounded-lg font-semibold hover:bg-pink-700 transition duration-300">
+                                <span>¡Lo quiero! Comprar Ahora</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: GALERÍA DE FOTOS (3x3 Grid) -->
+        <section id="galeria" class="py-20 lg:py-28 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-pink-600 mb-12">Galería de Inspiración</h2>
+                <p class="text-center text-xl text-gray-600 mb-16">Descubre cómo nuestras clientas lucen Fashions Yulivann.</p>
+
+                <!-- Grid 3x3 para la Galería -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+                    <!-- Foto 1 -->
+                    <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="https://placehold.co/500x500/fecaca/9d174d?text=Look+1" alt="Foto de producto de galería 1" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Foto 2 -->
+                    <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="https://placehold.co/500x500/c7d2fe/4338ca?text=Look+2" alt="Foto de producto de galería 2" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Foto 3 -->
+                    <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="https://placehold.co/500x500/a78bfa/5b21b6?text=Look+3" alt="Foto de producto de galería 3" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Foto 4 -->
+                    <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="https://placehold.co/500x500/94a3b8/1e293b?text=Look+4" alt="Foto de producto de galería 4" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Foto 5 -->
+                    <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="https://placehold.co/500x500/ffedd5/9a3412?text=Look+5" alt="Foto de producto de galería 5" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Foto 6 -->
+                    <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="https://placehold.co/500x500/f3e8ff/7c3aed?text=Look+6" alt="Foto de producto de galería 6" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Foto 7 -->
+                    <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="https://placehold.co/500x500/ffe4e6/be185d?text=Look+7" alt="Foto de producto de galería 7" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Foto 8 -->
+                    <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="https://placehold.co/500x500/e0e7ff/4f46e5?text=Look+8" alt="Foto de producto de galería 8" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Foto 9 -->
+                    <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+                        <img src="https://placehold.co/500x500/d1fae5/065f46?text=Look+9" alt="Foto de producto de galería 9" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 6: CONTACTO (Formulario) -->
+        <section id="contacto" class="py-20 lg:py-28 bg-indigo-50/70">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-indigo-600 mb-12">Hablemos de Estilo</h2>
+                <p class="text-center text-xl text-gray-600 mb-16">Déjanos tu mensaje y te responderemos a la brevedad.</p>
+
+                <div class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-xl shadow-2xl">
+                    <form onsubmit="mostrarMensaje(event)" class="space-y-6">
+                        <!-- Campo Nombre -->
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition duration-150" placeholder="Ej: Maria López">
+                        </div>
+
+                        <!-- Campo Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition duration-150" placeholder="ejemplo@correo.com">
+                        </div>
+
+                        <!-- Campo Teléfono -->
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition duration-150" placeholder="Ej: +57 300 123 4567">
+                        </div>
+
+                        <!-- Campo Mensaje -->
+                        <div>
+                            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition duration-150" placeholder="Escribe aquí tu consulta..."></textarea>
+                        </div>
+
+                        <!-- Botón de Envío -->
+                        <button type="submit" class="w-full px-4 py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.01]">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+
+                    <!-- Contenedor para el mensaje de éxito/error (Modal simple) -->
+                    <div id="status-message" class="mt-4 p-4 rounded-lg text-center hidden" role="alert"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 Fashions Yulivann. Todos los derechos reservados.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#inicio" class="text-gray-400 hover:text-pink-400 transition duration-300">Privacidad</a>
+                <span class="text-gray-600">|</span>
+                <a href="#inicio" class="text-gray-400 hover:text-pink-400 transition duration-300">Términos</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para la funcionalidad de la página -->
+    <script>
+        // Número de WhatsApp para contacto (reemplazar con el número real, incluyendo código de país)
+        const WHATSAPP_NUMBER = '1234567890'; 
+        
+        /**
+         * Maneja la redirección a WhatsApp con un mensaje pre-llenado.
+         * @param {string} productName Nombre del producto a consultar.
+         * @param {string} countryCode Código de país. Usado como ejemplo.
+         */
+        function contactarWhatsApp(productName, countryCode) {
+            const message = encodeURIComponent(`Hola, estoy interesado/a en el producto "${productName}" que vi en su web. ¿Podrían darme más información?`);
+            // Nota: Se asume que WHATSAPP_NUMBER ya incluye el código de país.
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+            
+            // Abrir en una nueva pestaña
+            window.open(whatsappUrl, '_blank');
+        }
+
+        /**
+         * Simula el envío del formulario de contacto y muestra un mensaje.
+         * @param {Event} event Evento de submit del formulario.
+         */
+        function mostrarMensaje(event) {
+            event.preventDefault(); // Detiene el envío real del formulario (ya que es un demo)
+
+            const form = event.target;
+            const messageBox = document.getElementById('status-message');
+            
+            // Simulación de envío exitoso
+            messageBox.textContent = '¡Gracias por tu mensaje! Hemos recibido tu información y te contactaremos pronto.';
+            messageBox.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+            messageBox.classList.add('bg-green-100', 'text-green-700');
+
+            // Limpiar el formulario después de la simulación
+            form.reset();
+
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 5000);
+        }
+
+        /**
+         * Lógica para el menú móvil (Botón hamburguesa).
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle del menú móvil
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Cerrar el menú móvil al hacer clic en un enlace (para SPA)
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
